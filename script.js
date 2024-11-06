@@ -1,8 +1,14 @@
 // script.js
 const questions = [
-    { question: "What percentage of Earth's surface is covered by water?", answer: 71 },
-    { question: "How many percent of the human body is water?", answer: 60 },
-    { question: "What is the average human body temperature in Fahrenheit?", answer: 98.6 },
+    { question: "How long is a ladder on a firetruck?", answer: 30 },
+    { question: "What year in the 2000's was the first official version of Minecraft released?", answer: 11 },
+    { question: "How many sisters does Ariel have in Disney's The Little Mermaid?", answer: 6 },
+    { question: "How many chips are normally in a regular tube of Pringles chips (200g)?", answer: 90 },
+    { question: "How many horse breeds originally come from Sweden?", answer: 3 },
+    { question: "How many colors are there on a classic Rubik's cube, besides red?", answer: 5 },
+    { question: "How many years has a couple been married when they celebrate their crystal wedding anniversary?", answer: 15 },
+    { question: "How many clavicles does a cat have?", answer: 0 },
+    { question: "How many times do you sing the word 'shark' in the whole song Baby Shark?", answer: 20 },
     // Add more questions as needed
 ];
 
