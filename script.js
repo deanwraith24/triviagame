@@ -54,6 +54,7 @@ function endGame() {
     document.getElementById('guess').style.display = "none";
     document.getElementById('score').style.display = "none";
     document.getElementById('next-btn').style.display = "none";
+    document.getElementById('submit-btn').style.display = "none";
     document.getElementById('question-count').style.display = "none";
     document.getElementById('final-score').style.display = "block";
     document.getElementById('final-score').innerText = `Your Final Score: ${totalScore}`;
