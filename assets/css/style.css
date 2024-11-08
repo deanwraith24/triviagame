@@ -1,43 +1,99 @@
 /* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
 }
 
-.game-container {
+/* Container Styling */
+.landing-page, .game-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    width: 100%;  /* Ensure full container width */
+    max-width: 400px;
+    width: 100%;
 }
 
-h1, #question, #score, #question-count, #final-score {
+/* Typography */
+h1, h2 {
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+p, li {
     margin: 10px 0;
 }
 
-#guess {
-    width: 80%;  /* Make input width consistent */
-    padding: 5px;
+/* List Styling for Rules */
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
     margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 200px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Input Field Styling */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%; /* Make buttons consistent width */
-    max-width: 200px; /* Set max width to prevent buttons from becoming too large */
+/* Dynamic Text Display */
+#correct-answer, #final-score {
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
 }
+
+/* Additional Styling for Scores */
+#score {
+    font-weight: bold;
+    color: #007bff;
+    margin: 15px 0;
+}
+
+#next-btn, #play-again-btn {
+    display: none; /* Hidden initially, displayed by JavaScript */
+}
+
