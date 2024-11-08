@@ -10,8 +10,8 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div class="game-container"></div>
-        <h1>Guess the Value Game</h1>
+    <div class="game-container">
+        <h1>Zero to 100</h1>
         <p id="question">Question will appear here</p>
         <input type="number" id="guess" min="0" max="100" placeholder="Enter your guess (0-100)">
         <button id="submit-btn" onclick="submitGuess()">Submit Guess</button>
@@ -19,6 +19,7 @@
         <p id="question-count">Question: 1 / 10</p>
         <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question</button>
         <p id="final-score" style="display: none;">Your Final Score: </p>
+        <button id="play-again-btn" onclick="playAgain()" style="display: none;">Play Again</button>
     </div>
     
 

@@ -1,14 +1,9 @@
 // script.js
+
 const questions = [
-    { question: "How long is a ladder on a firetruck?", answer: 30 },
-    { question: "What year in the 2000's was the first official version of Minecraft released?", answer: 11 },
-    { question: "How many sisters does Ariel have in Disney's The Little Mermaid?", answer: 6 },
-    { question: "How many chips are normally in a regular tube of Pringles chips (200g)?", answer: 90 },
-    { question: "How many horse breeds originally come from Sweden?", answer: 3 },
-    { question: "How many colors are there on a classic Rubik's cube, besides red?", answer: 5 },
-    { question: "How many years has a couple been married when they celebrate their crystal wedding anniversary?", answer: 15 },
-    { question: "How many clavicles does a cat have?", answer: 0 },
-    { question: "How many times do you sing the word 'shark' in the whole song Baby Shark?", answer: 20 },
+    { question: "What percentage of Earth's surface is covered by water?", answer: 71 },
+    { question: "How many percent of the human body is water?", answer: 60 },
+    { question: "What is the average human body temperature in Fahrenheit?", answer: 98.6 },
     // Add more questions as needed
 ];
 
@@ -58,6 +53,33 @@ function endGame() {
     document.getElementById('question-count').style.display = "none";
     document.getElementById('final-score').style.display = "block";
     document.getElementById('final-score').innerText = `Your Final Score: ${totalScore}`;
+    document.getElementById('play-again-btn').style.display = "block";
+}
+
+function playAgain() {
+    // Reset game variables
+    currentQuestionIndex = 0;
+    totalScore = 0;
+
+    // Reset UI elements
+    document.getElementById('question').style.display = "block";
+    document.getElementById('guess').style.display = "block";
+    document.getElementById('score').style.display = "block";
+    document.getElementById('score').innerText = `Current Score: 0`;
+    document.getElementById('next-btn').style.display = "none";
+    document.getElementById('submit-btn').style.display = "block";
+    document.getElementById('question-count').style.display = "block";
+    document.getElementById('question-count').innerText = `Question: 1 / 10`;
+    document.getElementById('final-score').style.display = "none";
+    document.getElementById('play-again-btn').style.display = "none";
+
+    // Reset the guess input field to placeholder text
+    const guessInput = document.getElementById('guess');
+    guessInput.value = "";  // Clear the input value
+    guessInput.placeholder = "Enter your guess (0-100)";  // Reset the placeholder text
+
+    // Display the first question
+    displayQuestion();
 }
 
 // Initialize game
