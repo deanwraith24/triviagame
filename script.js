@@ -50,8 +50,14 @@ function submitGuess() {
         correctAnswerElement.innerText = `The correct answer was: ${correctAnswer}`;
         correctAnswerElement.style.display = "block";
 
-        // Display the "Next Question" button
-        document.getElementById('next-btn').style.display = "block";
+        // Display the "Next Question" or "End Game" button
+        const nextButton = document.getElementById('next-btn');
+        if (currentQuestionIndex === maxQuestions - 1) {
+            nextButton.innerText = "End Game"; // Change button text on the last question
+        } else {
+            nextButton.innerText = "Next Question"; // Keep "Next Question" for all other questions
+        }
+        nextButton.style.display = "block";
     }
 }
 
@@ -68,9 +74,10 @@ function nextQuestion() {
 
         displayQuestion();
     } else {
-        endGame();
+        endGame(); // Automatically end game if the last question is reached
     }
 }
+
 
 function endGame() {
     document.getElementById('question').style.display = "none";
