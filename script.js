@@ -35,30 +35,36 @@ function displayQuestion() {
 }
 
 function submitGuess() {
-    const guess = parseInt(document.getElementById('guess').value);
-    const correctAnswer = shuffledQuestions[currentQuestionIndex].answer;
-
-    if (!isNaN(guess)) {
-        const score = Math.abs(guess - correctAnswer);
-        totalScore += score;
-
-        // Update score display
-        document.getElementById('score').innerText = `Current Score: ${totalScore}`;
-
-        // Show the correct answer
-        const correctAnswerElement = document.getElementById('correct-answer');
-        correctAnswerElement.innerText = `The correct answer was: ${correctAnswer}`;
-        correctAnswerElement.style.display = "block";
-
-        // Display the "Next Question" or "End Game" button
-        const nextButton = document.getElementById('next-btn');
-        if (currentQuestionIndex === maxQuestions - 1) {
-            nextButton.innerText = "End Game"; // Change button text on the last question
-        } else {
-            nextButton.innerText = "Next Question"; // Keep "Next Question" for all other questions
-        }
-        nextButton.style.display = "block";
+    const guessInput = document.getElementById('guess');
+    const guess = parseInt(guessInput.value);
+    
+    // Check if the guess is empty or invalid
+    if (isNaN(guess)) {
+        alert("Please enter a valid number between 0 and 100.");
+        guessInput.focus(); // Set focus back to the input field
+        return; // Exit the function if no valid guess was entered
     }
+
+    const correctAnswer = shuffledQuestions[currentQuestionIndex].answer;
+    const score = Math.abs(guess - correctAnswer);
+    totalScore += score;
+
+    // Update score display
+    document.getElementById('score').innerText = `Current Score: ${totalScore}`;
+
+    // Show the correct answer
+    const correctAnswerElement = document.getElementById('correct-answer');
+    correctAnswerElement.innerText = `The correct answer was: ${correctAnswer}`;
+    correctAnswerElement.style.display = "block";
+
+    // Display the "Next Question" or "End Game" button
+    const nextButton = document.getElementById('next-btn');
+    if (currentQuestionIndex === maxQuestions - 1) {
+        nextButton.innerText = "End Game"; // Change button text on the last question
+    } else {
+        nextButton.innerText = "Next Question"; // Keep "Next Question" for all other questions
+    }
+    nextButton.style.display = "block";
 }
 
 function nextQuestion() {
