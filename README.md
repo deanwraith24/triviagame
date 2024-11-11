@@ -1,131 +1,126 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Zero to 100 Trivia Game
 
-Welcome Dean Wraith,
+[Link to live project](https://deanwraith24.github.io/triviagame/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Zero to 100 is a trivia game where you have various questions and the answers are numbers that range between 0 and 100. The goal of the game is to get as many answers as close to the real answer as possible and tally the lowest score possible.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+![Image of responsive site]()
 
-## Gitpod Reminders
+### <u>Table of Contents</u>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [Planning](#planning)
+  * [External User Goals](#external-user-goals)
+  * [Site Owner Goals](#site-owner-goals)
+  * [Wireframes](#wireframes)
 
-`python3 -m http.server`
+* [Features](#features)
+  * [Landing Page](#landing-page)
+  * [Game Page](#game-page)
 
-A blue button should appear to click: _Make Public_,
+* [Future Enhancements](#future-enhancements)
 
-Another blue button should appear to click: _Open Browser_.
+* [Testing](#testing)
+  * [Manual Testing](#manual-testing)
+  * [Validation](#validation)
+  * [Issues](#issues)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* [Deployement](#deployement)
 
-A blue button should appear to click: _Make Public_,
+* [Credits](#credits)
 
-Another blue button should appear to click: _Open Browser_.
+### <u>Planning</u>
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### <u>External User Goals</u>
+The goals for the user is to have a fun and challenging trivia game.
 
-To log into the Heroku toolbelt CLI:
+#### <u>Site Owner Goals</u>
+The goals of the site owner are to produce a trivia game that can be played by ages from 6 years old and up and for it to be educational and fun.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### <u>Wireframes</u>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+<u>Home Page Wireframe</u>
 
-### Connecting your Mongo database
+![Game Page Wireframe]()
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### <u>Features</u>
 
-------
+#### <u>Landing Page</u>
 
-## Release History
+The landing page has the game title at the top and then the rules of the game listed below.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
 
-**June 18, 2024,** Add Mongo back into template
+![Landing Page]()
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+#### <u>Game Page</u>
 
-**May 28 2024:** Fix Mongo and Links installs
+When the player clicks the start game button on the landing page they are directed to the game page. On the game page the title at the top of the page is a link that will redirect to the landing page if the user wants to read the rules again. 
 
-**April 26 2024:** Update node version to 16
+Below that is the question the user needs to answer. The questions are randomly selected from a collection of 50 questions and are not repeated in a single game.
 
-**September 20 2023:** Update Python version to 3.9.17.
+There is then a section for the user to input a guess. It reminds the player the number needs to be between 0 and 100. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Then there is the submit guess button. If the button is clicked and the input field is empty an error messgae will appear prompting the player to input a guess. When the guess is input and the submit button is clicked the answer to the question is displayed, the score is updated and the submit button is disabled so it can't be clicked more than once. There is also a next question button that appears so the user can move forward in the game. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+There is a score counter that updates depending on the players answer. It is updated by adding the difference between the users guess and the correct answer. There is also a question counter to show the player their progress. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+When the player answers the final question the next question button changes to end game. When clicked the screen changes to show the players final score and gives them the option to play again.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Game Page]()
+![Guess Submitted]()
+![Final Question Answered]()
+![Final Score]()
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### <u>Future Enhancements</u>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The list below is some features that could be added in the future to enhance the user experience.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* Score Board
+A score board could be added so that players can keep track of their top 5 scores and track their progress.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Question Timer
+A timer could be added that could either be used for the whole game or each question that could make the game more difficult.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* Categories and Difficulty
+Questions could be seperated into specific categories and players could have a selection menu where they can select different categories and difficulty levels to challenge themselves.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### <u>Testing</u>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### <u>Manual Testing</u>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+I tested the game myself and also sent it to famliy and friends to play on various devices and to send feedback.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### <u>Validation</u>
+ * HTML
+ For the HTML I used W3C Markup Validation Service.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+ * CSS
+ For the validation of the CSS I used Jigsaw CSS validatior.
 
-------
+ * JS
+ For the validation of the CSS I used Jigsaw CSS validatior.
 
-## FAQ about the uptime script
+#### <u>Issues</u>
 
-**Why have you added this script?**
+Some of the issues that were encountered and then corrected during the testing are listed below, 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* Initially there was no way to return to the landing page, so the heading was turned into a link to allow this if users wanted to read the rules again.
 
-**How will this affect me?**
+* The submit button could be clicked more than once which would lead to the score being updated on each click, so the code was updated to disable the submit button after it has been clicked once and then be reset when the new question is loaded.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* The submit button was being displayed in the final score screen which was corrected by hiding it.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### <u>Deployement</u>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The project was deployed using GitHub Pages. The steps to deploy are as follows:
 
-**So….?**
+ 1. Open the repository and click on the settings tab.
+ 2. Navigate to the Pages tab in the menu on the left.
+ 3. Choose deploy from a branch and select main branch.
+ 4. Click save and you can access the deployed website from the Pages tab.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### <u>Credits</u>
 
-**Can I opt out?**
+The idea for the game from a card game I have played before. The questions and answers came from the game and I selected the more general questions to be used. 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+The course work and W3 Schools were helpful in developing the functions that allow the game to work.
