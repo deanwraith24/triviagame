@@ -4,7 +4,7 @@
 
 Zero to 100 is a trivia game where you have various questions and the answers are numbers that range between 0 and 100. The goal of the game is to get as many answers as close to the real answer as possible and tally the lowest score possible.
 
-![Image of responsive site]()
+![Image of responsive site](https://github.com/deanwraith24/triviagame/blob/main/assets/images/cover_image.jpg)
 
 ### <u>Table of Contents</u>
 
@@ -40,7 +40,7 @@ The goals of the site owner are to produce a trivia game that can be played by a
 
 <u>Home Page Wireframe</u>
 
-![Game Page Wireframe]()
+![Game Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
 
 ### <u>Features</u>
 
@@ -50,7 +50,7 @@ The landing page has the game title at the top and then the rules of the game li
 
 Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
 
-![Landing Page]()
+![Landing Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/landing_page.jpg)
 
 #### <u>Game Page</u>
 
@@ -66,10 +66,10 @@ There is a score counter that updates depending on the players answer. It is upd
 
 When the player answers the final question the next question button changes to end game. When clicked the screen changes to show the players final score and gives them the option to play again.
 
-![Game Page]()
-![Guess Submitted]()
-![Final Question Answered]()
-![Final Score]()
+![Game Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_page.jpg)
+![Guess Submitted](https://github.com/deanwraith24/triviagame/blob/main/assets/images/guess_submitted.jpg)
+![Final Question Answered](https://github.com/deanwraith24/triviagame/blob/main/assets/images/final_guess.jpg)
+![Final Score](https://github.com/deanwraith24/triviagame/blob/main/assets/images/final_score.jpg)
 
 ### <u>Future Enhancements</u>
 
@@ -98,7 +98,7 @@ I tested the game myself and also sent it to famliy and friends to play on vario
  For the validation of the CSS I used Jigsaw CSS validatior.
 
  * JS
- For the validation of the CSS I used Jigsaw CSS validatior.
+ For the validation of the CSS I used Code Beautyify JS validatior.
 
 #### <u>Issues</u>
 
