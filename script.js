@@ -10,7 +10,7 @@ const questions = [
     { question: "What is the number of Harry Potter books in the main series?", answer: 7 },
     { question: "Percentage of salt in seawater?", answer: 4 },
     { question: "How many hours are in a day?", answer: 24 },
-    { question: "How many days are in a year (non-leap year)?", answer: 365 },
+    { question: "How many days are in a year (non-leap year) over 300?", answer: 65 },
     { question: "What percentage of Earth's surface is covered by water?", answer: 71 },
     { question: "How many sides does a hexagon have?", answer: 6 },
     { question: "How many planets in our solar system are larger than Earth?", answer: 4 },
@@ -18,7 +18,7 @@ const questions = [
     { question: "How many continents have no native human population?", answer: 1 },
     { question: "How many players are there in a soccer team?", answer: 11 },
     { question: "How many strings are on a standard guitar?", answer: 6 },
-    { question: "How many elements are in the periodic table as of 2024?", answer: 118 },
+    { question: "How many elements are in the periodic table as of 2024 over 100?", answer: 18 },
     { question: "How many yards are in a football field?", answer: 100 },
     { question: "What is the number of keys on a standard piano?", answer: 88 },
     { question: "How many states border the state of Missouri?", answer: 8 },
@@ -45,8 +45,8 @@ const questions = [
     { question: "How many sides does an octagon have?", answer: 8 },
     { question: "How many films are in the Lord of the Rings series?", answer: 3 },
     { question: "How many bones are in the human ear?", answer: 3 },
-    { question: "How many degrees are in a circle?", answer: 360 },
-    { question: "How many days are in a leap year?", answer: 366 },
+    { question: "How many degrees are in a circle over 300?", answer: 60 },
+    { question: "How many more days are in a leap year compared to a normal year?", answer: 1 },
     { question: "How many US states have a coastline?", answer: 23 },
     { question: "How many weeks are in a year?", answer: 52 },
     { question: "How many inches are in a foot?", answer: 12 },
@@ -105,22 +105,26 @@ function submitGuess() {
         nextButton.innerText = "Next Question"; // Keep "Next Question" for all other questions
     }
     nextButton.style.display = "block";
+
+    // Disable the Submit Guess button to prevent multiple clicks
+    const submitButton = document.querySelector("button[onclick='submitGuess()']");
+    submitButton.disabled = true;
 }
 
 function nextQuestion() {
     currentQuestionIndex++;
-
     if (currentQuestionIndex < maxQuestions && currentQuestionIndex < shuffledQuestions.length) {
         document.getElementById('question-count').innerText = `Question: ${currentQuestionIndex + 1} / 10`;
         document.getElementById('guess').value = '';
         document.getElementById('next-btn').style.display = "none";
-
-        // Hide the correct answer display for the next question
         document.getElementById('correct-answer').style.display = "none";
-
         displayQuestion();
+
+        // Re-enable the Submit Guess button for the next question
+        const submitButton = document.querySelector("button[onclick='submitGuess()']");
+        submitButton.disabled = false;
     } else {
-        endGame(); // Automatically end game if the last question is reached
+        endGame();
     }
 }
 
@@ -163,6 +167,10 @@ function playAgain() {
     const guessInput = document.getElementById('guess');
     guessInput.value = "";  // Clear the input value
     guessInput.placeholder = "Enter your guess (0-100)";  // Reset the placeholder text
+
+    // Re-enable the Submit Guess button
+    const submitButton = document.querySelector("button[onclick='submitGuess()']");
+    submitButton.disabled = false;
 
     // Display the first question
     displayQuestion();
