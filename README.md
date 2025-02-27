@@ -4,7 +4,7 @@
 
 Zero to 100 is a trivia game where you have various questions and the answers are numbers that range between 0 and 100. The goal of the game is to get as many answers as close to the real answer as possible and tally the lowest score possible.
 
-![Image of responsive site](https://github.com/deanwraith24/triviagame/blob/main/assets/images/cover_image.jpg)
+![Image of responsive site](assets/images/responsive.jpg)
 
 ### <u>Table of Contents</u>
 
@@ -42,39 +42,11 @@ The goals of the site owner are to produce a trivia game that can be played by a
 
 ##### <u>Mobile</u>
 
-<u>Home Page Wireframe</u>
-
-![Home Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
-
-<u>Game Page Wireframe</u>
-
-![Game Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
-
-<u>Rules Page Wireframe</u>
-
-![Rules Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
-
-<u>Contact Page Wireframe</u>
-
-![Contact Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+![Mobile Wireframe](assets/images/mobile.jpg)
 
 ##### <u>Desktop</u>
 
-<u>Home Page Wireframe</u>
-
-![Home Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
-
-<u>Game Page Wireframe</u>
-
-![Game Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
-
-<u>Rules Page Wireframe</u>
-
-![Rules Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
-
-<u>Contact Page Wireframe</u>
-
-![Contact Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+![Desktop Wireframe](assets/images/web.jpg)
 
 ### <u>Features</u>
 
@@ -84,7 +56,7 @@ The landing page has the game title at the top and then the rules of the game li
 
 Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
 
-![Landing Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/landing_page.jpg)
+![Landing Page](assets/images/home.jpg)
 
 #### <u>Game Page</u>
 
@@ -100,26 +72,27 @@ There is a score counter that updates depending on the players answer. It is upd
 
 When the player answers the final question the next question button changes to end game. When clicked the screen changes to show the players final score and gives them the option to play again.
 
-![Game Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_page.jpg)
-![Guess Submitted](https://github.com/deanwraith24/triviagame/blob/main/assets/images/guess_submitted.jpg)
-![Final Question Answered](https://github.com/deanwraith24/triviagame/blob/main/assets/images/final_guess.jpg)
-![Final Score](https://github.com/deanwraith24/triviagame/blob/main/assets/images/final_score.jpg)
+##### <u>Game Page</u>
+![Game Page](assets/images/game.jpg)
+##### <u>Incorrect Answer Response</u>
+![Incorrect Answer](assets/images/incorrect.jpg)
+##### <u>Correct Answer Response</u>
+![Correct Answer](assets/images/correct.jpg)
+##### <u>Final Score</u>
+![Final Score](assets/images/end.jpg)
 
 #### <u>Rules Page</u>
 
-The landing page has the game title at the top and then the rules of the game listed below.
+The rules page contains the game rule, scoring details and tips on how to play the game.
 
-Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
-
-![Landing Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/landing_page.jpg)
+![Rules Page](assets/images/rules1.jpg)
+![Rules Page](assets/images/rules2.jpg)
 
 #### <u>Contact Page</u>
 
-The landing page has the game title at the top and then the rules of the game listed below.
+The contact page has a simple contact form and contact details for the users to contact designers with feedback and questions.
 
-Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
-
-![Landing Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/landing_page.jpg)
+![Contact Page](assets/images/contact.jpg)
 
 ### <u>Future Enhancements</u>
 
@@ -144,21 +117,22 @@ I tested the game myself and also sent it to famliy and friends to play on vario
 
 |Feature|Expected|Testing|Result|
 |:------|:-------|:------|:----:|
+|Navbar links|When clicked, direct user to specified page|Clicked all links in navbar|Passed|
+|Social media links|When clicked, open social media page in new window|Clicked various links|Passed|
+|Start Game button|When clicked, direct user to game page and new game|Clicked button|Passed|
 
 ##### <u>Game Page</u>
 
 |Feature|Expected|Testing|Result|
 |:------|:-------|:------|:----:|
-
-##### <u>Rules Page</u>
-
-|Feature|Expected|Testing|Result|
-|:------|:-------|:------|:----:|
-
-##### <u>Contact Page</u>
-
-|Feature|Expected|Testing|Result|
-|:------|:-------|:------|:----:|
+|Question section|Show random question from selection. Don't repeat in same game. Display new question.|Played multiple games|Passed|
+|Guess Input|Allow only numbers to be typed in.|Typed letters and numbers|Passed|
+|Submit Guess Button|Check answer, display correct/incorrect and calculate score|Played multiple games|Passed
+|Next Question Button|Reload new question and display submit button again|Played multiple games|Passed|
+|Score Counter|Update with correct difference after question asnwered|Played multiple games|Passed|
+|Question Counter|Update question player is on|Played multiple games|Passed|
+|End game screen|Show final score and button to play new game|Finished multiple games|Passed|
+|Play Again Button|Reload game page with new game|Clicked button|Passed|
 
 #### <u>Validation</u>
  * HTML
