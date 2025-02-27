@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero to 100 - Game</title>
+    <title>Zero to 100 - Rules</title>
     <!-- Bootstrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome for social icons -->
@@ -25,7 +25,7 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rules.html">Rules</a>
+                        <a class="nav-link active" href="rules.html">Rules</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -37,22 +37,48 @@
 
     <!-- Main Content -->
     <div class="main-container">
-        <div class="game-container">
-            <h1 class="game-title">Zero to 100</h1>
-            <div class="question-area">
-                <p id="question">Question will appear here</p>
-                <input type="text" id="guess" placeholder="Enter your guess (0-100)" maxlength="3">
-                <p id="correct-answer" style="display: none;">The correct answer was: </p>
-                <button id="submit-btn" onclick="submitGuess()">Submit Guess</button>
-            </div>
-            <div class="status-area">
-                <p id="score">Current Score: 0</p>
-                <p id="question-count">Question: 1 / 10</p>
-            </div>
-            <div class="navigation-buttons">
-                <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question</button>
-                <p id="final-score" style="display: none;">Your Final Score: </p>
-                <button id="play-again-btn" onclick="playAgain()" style="display: none;">Play Again</button>
+        <div class="content-container">
+            <h1 class="main-title">Game Rules</h1>
+            <div class="rules-detailed">
+                <h2>How to Play Zero to 100</h2>
+                <div class="rule-section">
+                    <h3>Objective</h3>
+                    <p>Test your knowledge by guessing numerical answers to various questions. The closer your guess is to the correct answer, the better your score will be!</p>
+                </div>
+                
+                <div class="rule-section">
+                    <h3>Gameplay</h3>
+                    <ol>
+                        <li>You will be presented with 10 random questions.</li>
+                        <li>Each question has a numerical answer between 0 and 100.</li>
+                        <li>Type your best guess in the input field.</li>
+                        <li>Click "Submit Guess" to see the correct answer.</li>
+                        <li>Your score for each question is the absolute difference between your guess and the correct answer.</li>
+                        <li>For example, if the correct answer is 75 and you guess 70, your score is 5 points.</li>
+                        <li>Click "Next Question" to proceed to the next question.</li>
+                        <li>After 10 questions, your final score will be displayed.</li>
+                    </ol>
+                </div>
+                
+                <div class="rule-section">
+                    <h3>Scoring</h3>
+                    <p>The goal is to achieve the <strong>lowest possible score</strong>. A perfect score would be 0, meaning you guessed all answers correctly!</p>
+                    <p>Your final score is the sum of all differences across the 10 questions.</p>
+                </div>
+                
+                <div class="rule-section">
+                    <h3>Tips</h3>
+                    <ul>
+                        <li>Remember that all answers are between 0 and 100.</li>
+                        <li>Use your general knowledge to make educated guesses.</li>
+                        <li>Try to remember common facts and statistics.</li>
+                        <li>Have fun and challenge your friends to beat your score!</li>
+                    </ul>
+                </div>
+                
+                <div class="button-container">
+                    <button class="btn-primary" onclick="location.href='game.html'">Start Game</button>
+                </div>
             </div>
         </div>
     </div>

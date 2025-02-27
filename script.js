@@ -74,6 +74,31 @@ function displayQuestion() {
     }
 }
 
+// Set up input validation when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const guessInput = document.getElementById('guess');
+    
+    // Remove the stepper arrows
+    guessInput.setAttribute('type', 'text');
+    
+    // Add event listener to ensure only numbers are entered
+    guessInput.addEventListener('input', function(e) {
+        // Remove any non-numeric characters
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+    
+    // Prevent non-numeric key presses
+    guessInput.addEventListener('keypress', function(e) {
+        const keyCode = e.which || e.keyCode;
+        const keyValue = String.fromCharCode(keyCode);
+        
+        // Allow only numeric input
+        if (!/^[0-9]+$/.test(keyValue)) {
+            e.preventDefault();
+        }
+    });
+});
+
 function submitGuess() {
     const guessInput = document.getElementById('guess');
     const guess = parseInt(guessInput.value);

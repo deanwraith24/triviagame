@@ -1,4 +1,4 @@
-/* styles.css */
+/* style.css */
 
 /* General Reset */
 * {
@@ -8,54 +8,83 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Main Container */
+.main-container {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Container Styling */
-.landing-page, .game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.landing-page, .game-container, .content-container {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-container {
+    padding: 40px;
 }
 
 /* Typography */
-h1, h2 {
-    margin: 20px 0 10px;
+.main-title, .game-title {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
     color: #333;
 }
 
 a {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007bff;
 }
 
 p, li {
-    margin: 10px 0;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-/* List Styling for Rules */
-ul {
-    list-style: disc;
-    padding-left: 20px;
-    text-align: left;
+/* List Styling */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 /* Button Styling */
-button {
+button, .btn-primary {
     padding: 10px 20px;
     margin: 10px 0;
     font-size: 16px;
@@ -65,40 +94,231 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    max-width: 200px;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Input Field Styling */
-input[type="number"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: auto;
+    min-width: 150px;
     text-align: center;
 }
 
-/* Dynamic Text Display */
-#correct-answer, #final-score {
-    font-weight: bold;
-    color: #555;
-    margin-top: 10px;
+button:hover, .btn-primary:hover {
+    background-color: #0056b3;
 }
 
-/* Additional Styling for Scores */
-#score {
+/* Game Specific Styling */
+.question-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#guess {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+}
+
+.status-area {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+#score, #question-count {
     font-weight: bold;
     color: #007bff;
+    margin: 10px;
+}
+
+.navigation-buttons {
+    text-align: center;
+}
+
+#correct-answer {
+    padding: 10px;
     margin: 15px 0;
+    background-color: #f8f9fa;
+    border-radius: 5px;
 }
 
-#next-btn, #play-again-btn {
-    display: none; /* Hidden initially, displayed by JavaScript */
+#final-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 20px 0;
 }
 
+/* Rules Page Styling */
+.rules-detailed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rule-section {
+    margin-bottom: 30px;
+}
+
+.rule-section h3 {
+    color: #007bff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Contact Page Styling */
+.contact-section {
+    margin-top: 30px;
+}
+
+.contact-info, .contact-form {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #007bff;
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+.social-contact {
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .landing-page, .game-container, .content-container {
+        max-width: 600px;
+        padding: 25px;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .footer p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-container {
+        padding: 20px 15px;
+    }
+    
+    .landing-page, .game-container, .content-container {
+        padding: 20px;
+    }
+    
+    .status-area {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info, .contact-form {
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .landing-page, .game-container, .content-container {
+        padding: 15px;
+    }
+    
+    #question {
+        font-size: 1rem;
+    }
+    
+    button, .btn-primary {
+        width: 100%;
+    }
+}
