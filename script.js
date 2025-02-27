@@ -89,12 +89,20 @@ function submitGuess() {
     const score = Math.abs(guess - correctAnswer);
     totalScore += score;
 
+    // Create a feedback message
+    let feedbackMessage = "";
+    if (guess === correctAnswer) {
+        feedbackMessage = "<span style='color: green; font-weight: bold;'>Correct!</span>";
+    } else {
+        feedbackMessage = "<span style='color: red; font-weight: bold;'>Incorrect.</span>";
+    }
+    
     // Update score display
     document.getElementById('score').innerText = `Current Score: ${totalScore}`;
 
-    // Show the correct answer
+    // Show the correct answer with feedback
     const correctAnswerElement = document.getElementById('correct-answer');
-    correctAnswerElement.innerText = `The correct answer was: ${correctAnswer}`;
+    correctAnswerElement.innerHTML = `${feedbackMessage} The correct answer was: ${correctAnswer}`;
     correctAnswerElement.style.display = "block";
 
     // Display the "Next Question" or "End Game" button
@@ -106,9 +114,9 @@ function submitGuess() {
     }
     nextButton.style.display = "block";
 
-    // Disable the Submit Guess button to prevent multiple clicks
-    const submitButton = document.querySelector("button[onclick='submitGuess()']");
-    submitButton.disabled = true;
+    // Hide the Submit Guess button
+    const submitButton = document.getElementById('submit-btn');
+    submitButton.style.display = "none";
 }
 
 function nextQuestion() {
@@ -118,16 +126,15 @@ function nextQuestion() {
         document.getElementById('guess').value = '';
         document.getElementById('next-btn').style.display = "none";
         document.getElementById('correct-answer').style.display = "none";
+        
+        // Show the Submit Guess button for the next question
+        document.getElementById('submit-btn').style.display = "block";
+        
         displayQuestion();
-
-        // Re-enable the Submit Guess button for the next question
-        const submitButton = document.querySelector("button[onclick='submitGuess()']");
-        submitButton.disabled = false;
     } else {
         endGame();
     }
 }
-
 
 function endGame() {
     document.getElementById('question').style.display = "none";
@@ -167,10 +174,6 @@ function playAgain() {
     const guessInput = document.getElementById('guess');
     guessInput.value = "";  // Clear the input value
     guessInput.placeholder = "Enter your guess (0-100)";  // Reset the placeholder text
-
-    // Re-enable the Submit Guess button
-    const submitButton = document.querySelector("button[onclick='submitGuess()']");
-    submitButton.disabled = false;
 
     // Display the first question
     displayQuestion();
