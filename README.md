@@ -16,6 +16,8 @@ Zero to 100 is a trivia game where you have various questions and the answers ar
 * [Features](#features)
   * [Landing Page](#landing-page)
   * [Game Page](#game-page)
+  * [Rules Page](#rules-page)
+  * [Contact Page](#contact-page)
 
 * [Future Enhancements](#future-enhancements)
 
@@ -38,9 +40,41 @@ The goals of the site owner are to produce a trivia game that can be played by a
 
 #### <u>Wireframes</u>
 
+##### <u>Mobile</u>
+
 <u>Home Page Wireframe</u>
 
+![Home Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+<u>Game Page Wireframe</u>
+
 ![Game Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+<u>Rules Page Wireframe</u>
+
+![Rules Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+<u>Contact Page Wireframe</u>
+
+![Contact Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+##### <u>Desktop</u>
+
+<u>Home Page Wireframe</u>
+
+![Home Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+<u>Game Page Wireframe</u>
+
+![Game Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+<u>Rules Page Wireframe</u>
+
+![Rules Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
+
+<u>Contact Page Wireframe</u>
+
+![Contact Page Wireframe](https://github.com/deanwraith24/triviagame/blob/main/assets/images/game_wireframe.jpg)
 
 ### <u>Features</u>
 
@@ -71,6 +105,22 @@ When the player answers the final question the next question button changes to e
 ![Final Question Answered](https://github.com/deanwraith24/triviagame/blob/main/assets/images/final_guess.jpg)
 ![Final Score](https://github.com/deanwraith24/triviagame/blob/main/assets/images/final_score.jpg)
 
+#### <u>Rules Page</u>
+
+The landing page has the game title at the top and then the rules of the game listed below.
+
+Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
+
+![Landing Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/landing_page.jpg)
+
+#### <u>Contact Page</u>
+
+The landing page has the game title at the top and then the rules of the game listed below.
+
+Below the rules is a button that allows the player to start the game when they have read the rules and are ready to start.
+
+![Landing Page](https://github.com/deanwraith24/triviagame/blob/main/assets/images/landing_page.jpg)
+
 ### <u>Future Enhancements</u>
 
 The list below is some features that could be added in the future to enhance the user experience.
@@ -90,6 +140,26 @@ Questions could be seperated into specific categories and players could have a s
 
 I tested the game myself and also sent it to famliy and friends to play on various devices and to send feedback.
 
+##### <u>Home Page</u>
+
+|Feature|Expected|Testing|Result|
+|:------|:-------|:------|:----:|
+
+##### <u>Game Page</u>
+
+|Feature|Expected|Testing|Result|
+|:------|:-------|:------|:----:|
+
+##### <u>Rules Page</u>
+
+|Feature|Expected|Testing|Result|
+|:------|:-------|:------|:----:|
+
+##### <u>Contact Page</u>
+
+|Feature|Expected|Testing|Result|
+|:------|:-------|:------|:----:|
+
 #### <u>Validation</u>
  * HTML
  For the HTML I used W3C Markup Validation Service.
@@ -98,7 +168,7 @@ I tested the game myself and also sent it to famliy and friends to play on vario
  For the validation of the CSS I used Jigsaw CSS validatior.
 
  * JS
- For the validation of the CSS I used Code Beautyify JS validatior.
+ For the validation of the JS I used Code Beautyify JS validatior.
 
 #### <u>Issues</u>
 
